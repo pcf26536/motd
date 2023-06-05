@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.motd" path="/org/gnome/shell/extensions/motd/">
+        <key name="update-frequency" type="i">
+            <default>5</default>
+            <summary>Live score update frequency</summary>
+        </key>
+        <key name="followed-only" type="b">
+            <default>false</default>
+            <summary>Display only followed teams</summary>
+        </key>
+        <key name="compact-mode" type="b">
+            <default>false</default>
+            <summary>Enable compact mode</summary>
+        </key>
+        <key name="position-in-topbar" type="i">
+            <default>1</default>
+            <summary>Position of extension in Top Bar (0 for Left, 1 for Right)</summary>
+        </key>
+        <key name="bund-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Bund scoreboard</summary>
+        </key>
+        <key name="ucl-enabled" type="b">
+            <default>false</default>
+            <summary>Enable UCL scoreboard</summary>
+        </key>
+        <key name="epl-enabled" type="b">
+            <default>false</default>
+            <summary>Enable EPL scoreboard</summary>
+        </key>
+        <key name="fa-enabled" type="b">
+            <default>false</default>
+            <summary>Enable FA scoreboard</summary>
+        </key>
+        <key name="efl-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Carabao scoreboard</summary>
+        </key>
+        <key name="championship-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Championship scoreboard</summary>
+        </key>
+        <key name="laliga-enabled" type="b">
+            <default>false</default>
+            <summary>Enable LaLiga scoreboard</summary>
+        </key>
+        <key name="ligue1-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Ligue 1 scoreboard</summary>
+        </key>
+        <key name="seriea-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Serie A scoreboard</summary>
+        </key>
+        <key name="conmebol-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Copa America scoreboard</summary>
+        </key>
+        <key name="uel-enabled" type="b">
+            <default>false</default>
+            <summary>Enable UEFA Europa League scoreboard</summary>
+        </key>
+        <key name="uecl-enabled" type="b">
+            <default>false</default>
+            <summary>Enable UEFA Europa Conference League scoreboard</summary>
+        </key>
+        <key name="fifawc-enabled" type="b">
+            <default>false</default>
+            <summary>Enable FIFA World Cup scoreboard</summary>
+        </key>
+        <key name="uefachampions-enabled" type="b">
+            <default>false</default>
+            <summary>Enable UEFA Champions League scoreboard</summary>
+        </key>
+        <key name="uefaeuro-enabled" type="b">
+            <default>false</default>
+            <summary>Enable UEFA European Championship scoreboard</summary>
+        </key>
+        <key name="uefanl-enabled" type="b">
+            <default>false</default>
+            <summary>Enable UEFA Nations League scoreboard</summary>
+        </key>
+        <key name="caf-enabled" type="b">
+            <default>false</default>
+            <summary>Enable CAF scoreboard</summary>
+        </key>
+        <key name="friendly-enabled" type="b">
+            <default>false</default>
+            <summary>Enable Club Friendly scoreboard</summary>
+        </key>
+        <key name="cf-man" type="b">
+            <default>false</default>
+            <summary>Follow Club Friendly team: Manchester United</summary>
+        </key>
+        <key name="uel-man" type="b">
+            <default>false</default>
+            <summary>Follow UEL team: Manchester United</summary>
+        </key>
+        <key name="uecl-man" type="b">
+            <default>false</default>
+            <summary>Follow UECL team: Manchester United</summary>
+        </key>
+        <key name="ucl-man" type="b">
+            <default>false</default>
+            <summary>Follow UCL team: Manchester United</summary>
+        </key>
+        <key name="epl-man" type="b">
+            <default>false</default>
+            <summary>Follow EPL team: Manchester United</summary>
+        </key>
+        <key name="fa-man" type="b">
+            <default>false</default>
+            <summary>Follow FA team: Manchester United</summary>
+        </key>
+        <key name="efl-man" type="b">
+            <default>false</default>
+            <summary>Follow Carabao team: Manchester United</summary>
+        </key>
+    </schema>
+</schemalist>
