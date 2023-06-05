@@ -12,24 +12,24 @@ const EXTENSION = ExtensionUtils.getCurrentExtension();
 const CONSTANTS = EXTENSION.imports.const;
 const Client = EXTENSION.imports.client;
 
-const Colosseum = GObject.registerClass({ GTypeName: 'Colosseum'},
-    class Colosseum extends PanelMenu.Button {
+const Motd = GObject.registerClass({ GTypeName: 'Motd'},
+    class Motd extends PanelMenu.Button {
         _init() {
-            super._init(0.0, "colosseum", false);
+            super._init(0.0, "motd", false);
 
             this._scores = [];
             this._timeout = null;
 
-            this._settings = ExtensionUtils.getSettings("org.gnome.shell.extensions.colosseum");
+            this._settings = ExtensionUtils.getSettings("org.gnome.shell.extensions.motd");
             this._settings.connect('changed::' + CONSTANTS.PREF_POSITION_TOPBAR, this._updatePositionInPanel.bind(this))
 
-            this._client = new Client.ColosseumClient(CONSTANTS, this._settings);
+            this._client = new Client.MotdClient(CONSTANTS, this._settings);
 
             this._panelBoxLayout = new St.BoxLayout();
 
             this._icon = new St.Icon({
-                gicon : Gio.icon_new_for_string( EXTENSION.dir.get_path() + '/icon/colosseum-symbolic.svg' ),
-                icon_size: 24
+                gicon : Gio.icon_new_for_string( EXTENSION.dir.get_path() + '/icon/motd-symbolic.svg' ),
+                style_class: 'system-status-icon'
             });
 
             this._menuText = new St.Label({
@@ -337,8 +337,8 @@ let scores;
 function init() {}
 
 function enable() {
-    scores = new Colosseum;
-    Main.panel.addToStatusArea('colosseum', scores, 1, scores._settings.get_int(CONSTANTS.PREF_POSITION_TOPBAR) == 0 ? "left" : "right" );
+    scores = new Motd;
+    Main.panel.addToStatusArea('motd', scores, 1, scores._settings.get_int(CONSTANTS.PREF_POSITION_TOPBAR) == 0 ? "left" : "right" );
 }
 
 function disable() {
