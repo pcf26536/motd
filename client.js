@@ -51,7 +51,7 @@ const STATUS = {
 	FINAL_SCORE_ABANDONED: "51"
 };	
 
-var ColosseumClient = class ColosseumClient {
+var MotdClient = class MotdClient {
 	constructor(constants, settings) {
 		this.session = new Soup.Session();
 		this.dateFmt = new Intl.DateTimeFormat("en", {
@@ -65,39 +65,57 @@ var ColosseumClient = class ColosseumClient {
 			hour: 'numeric', minute: 'numeric'
 		}); 
 
-		this.BASE_API_URL = 'https://site.api.espn.com/apis/site/v2/sports/';
+		this.BASE_API_URL = 'https://site.api.espn.com/apis/site/v2/sports/soccer/';
 		this.API_URLS = {
 			EPL: [
-				this.BASE_API_URL + 'soccer/eng.1/scoreboard'
+				this.BASE_API_URL + 'eng.1/scoreboard'
+			],
+			EFL: [
+				this.BASE_API_URL + 'eng.league_cup/scoreboard'
+			],
+			FA: [
+				this.BASE_API_URL + 'eng.fa/scoreboard'
 			],
 			Championship: [
-				this.BASE_API_URL + 'soccer/eng.2/scoreboard'
+				this.BASE_API_URL + 'eng.2/scoreboard'
 			],
 			LaLiga: [
-				this.BASE_API_URL + 'soccer/esp.1/scoreboard'
+				this.BASE_API_URL + 'esp.1/scoreboard'
 			],
 			"Serie A": [
-				this.BASE_API_URL + 'soccer/ita.1/scoreboard'
+				this.BASE_API_URL + 'ita.1/scoreboard'
 			],
 			Bund: [
-				this.BASE_API_URL + 'soccer/ger.1/scoreboard'
+				this.BASE_API_URL + 'ger.1/scoreboard'
 			],
 			UCL: [
-				this.BASE_API_URL + 'soccer/uefa.champions/scoreboard',	
-				this.BASE_API_URL + 'soccer/uefa.champions_qual/scoreboard'
+				this.BASE_API_URL + 'uefa.champions/scoreboard',	
+				this.BASE_API_URL + 'uefa.champions_qual/scoreboard'
 			],
 			UEL: [
-				this.BASE_API_URL + 'soccer/uefa.europa/scoreboard'
+				this.BASE_API_URL + 'uefa.europa/scoreboard'
+			],
+			UECL: [
+				this.BASE_API_URL + 'uefa.europa.conf/scoreboard'
+			],
+			"Club Friendly": [
+				this.BASE_API_URL + 'CLUB.FRIENDLY/scoreboard'
 			],
 			EURO: [
-				this.BASE_API_URL + 'soccer/uefa.euro/scoreboard',	
-				this.BASE_API_URL + 'soccer/uefa.euroq/scoreboard'
+				this.BASE_API_URL + 'uefa.euro/scoreboard',	
+				this.BASE_API_URL + 'uefa.euroq/scoreboard'
+			],
+			"Nations League": [
+				this.BASE_API_URL + 'uefa.nations/scoreboard'
 			],
 			"Copa America": [
-				this.BASE_API_URL + 'soccer/conmebol.america/scoreboard',
+				this.BASE_API_URL + 'conmebol.america/scoreboard',
 			],
 			"FIFA World Cup": [
-				this.BASE_API_URL + 'soccer/fifa.world/scoreboard'
+				this.BASE_API_URL + 'fifa.world/scoreboard'
+			],
+			CAF: [
+				this.BASE_API_URL + 'caf.nations/scoreboard'
 			]
 		}
 
