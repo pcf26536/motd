@@ -6,8 +6,8 @@ const Gtk = imports.gi.Gtk;
 const EXTENSION = ExtensionUtils.getCurrentExtension();
 const CONSTANTS = EXTENSION.imports.const;
 
-const colosseum = GObject.registerClass({ GTypeName: 'colosseumPrefsWidget' },
-    class colosseum extends Gtk.Box {
+const motd = GObject.registerClass({ GTypeName: 'motdPrefsWidget' },
+    class motd extends Gtk.Box {
         _init(params) {
             super._init(params);
 
@@ -16,7 +16,7 @@ const colosseum = GObject.registerClass({ GTypeName: 'colosseumPrefsWidget' },
 
             this.total = {};
 
-            this._settings = ExtensionUtils.getSettings("org.gnome.shell.extensions.colosseum");
+            this._settings = ExtensionUtils.getSettings("org.gnome.shell.extensions.motd");
 
             const builder = new Gtk.Builder();
             builder.add_from_file(EXTENSION.path + "/ui/prefs.ui")
@@ -236,7 +236,7 @@ const TournamentRow = GObject.registerClass({
 function init() {}
 
 function buildPrefsWidget() {
-    let c = new colosseum();
+    let c = new motd();
     c.show();
 
     return c;
