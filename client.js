@@ -89,8 +89,7 @@ var MotdClient = class MotdClient {
 				this.BASE_API_URL + 'ger.1/scoreboard'
 			],
 			UCL: [
-				this.BASE_API_URL + 'uefa.champions/scoreboard',	
-				this.BASE_API_URL + 'uefa.champions_qual/scoreboard'
+				this.BASE_API_URL + 'uefa.champions/scoreboard'
 			],
 			UEL: [
 				this.BASE_API_URL + 'uefa.europa/scoreboard'
